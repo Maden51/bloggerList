@@ -1,0 +1,13 @@
+.selected {
+    color: #FE8700 !important;
+}
+
+.selected-image::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color:  #FE8700;
+}

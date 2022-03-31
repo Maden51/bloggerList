@@ -1,0 +1,5 @@
+.post-active {
+    display: block !important;
+    height: 100% !important;
+    opacity: 1 !important;
+}
