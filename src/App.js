@@ -7,6 +7,7 @@ import UserPosts from './components/UserPosts';
 
 const Wrapper = styled.section`
     padding: 64px 61px;
+    margin: 0 auto;
   `
 
   const Title = styled.h1`
@@ -16,6 +17,12 @@ const Wrapper = styled.section`
     color: #384758;
     text-align: center;
     margin-top: 0;
+    @media (max-width: 600px) {
+      font-size: 30px;
+    }
+    @media (max-width: 400px) {
+      font-size: 26px;
+    }
   `
 
   const SubTitle = styled.h2`
@@ -24,6 +31,9 @@ const Wrapper = styled.section`
     font-weight: 400;
     line-height: 27px;
     color: #606F81;
+    @media (max-width: 400px) {
+      font-size: 15px;
+    }
   `
 
 function App() {

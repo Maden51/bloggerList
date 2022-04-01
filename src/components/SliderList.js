@@ -11,6 +11,7 @@ const Wpapper = styled.section`
         text-align: center;
         margin-top: 31px;
         overflow: hidden;
+        width: 100%;
     `
 
 const Slider = styled.div`
@@ -39,6 +40,9 @@ const BackImage = styled.img`
         z-index: -2;
         right: 0;
         top: 245px;
+        @media (max-width: 500px) {
+            display: none;
+    }
     `
 
 function SliderList({ userData, selectedUser, handleSelectUser }) {
@@ -77,8 +81,6 @@ function SliderList({ userData, selectedUser, handleSelectUser }) {
                         spaceBetween: 40,
                     },
                 }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
             >
                 {userData.map((user, index) => (
                     <SwiperSlide

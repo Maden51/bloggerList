@@ -23,11 +23,31 @@ const Wrapper = styled.section`
     bottom: 0%;
     left: -4%;
     z-index: -1000;
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
+  @media (max-width: 600px) {
+      padding-left: 0;
+    }
 `
 
 const Header = styled.div`
-  
+  &:before {
+    content: '';
+    height: 78px;
+    width: 100px;
+    display: block;
+    position: absolute;
+    background-image: url(${posts});
+    left: 15%;
+    @media (max-width: 1000px) {
+      left: 5%;
+    }
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
 `
 
 const Title = styled.h1`
@@ -36,14 +56,11 @@ const Title = styled.h1`
   line-height: 100%;
   color: #384758;
   position: relative;
-  &:before {
-    content: '';
-    height: 78px;
-    width: 100px;
-    display: block;
-    position: absolute;
-    background-image: url(${posts});
-    left: -10%;
+  @media (max-width: 600px) {
+      font-size: 30px;
+  }
+  @media (max-width: 400px) {
+      font-size: 26px;
   }
 `
 
@@ -63,6 +80,9 @@ const PostTitle = styled.h2`
   line-height: 28px;
   color: #384758;
   margin-bottom: 7px;
+  @media (max-width: 400px) {
+      font-size: 20px;
+    }
 `
 
 const PostText = styled.p`
@@ -70,6 +90,9 @@ const PostText = styled.p`
   line-height: 28px;
   color: #606F81;
   margin: 0;
+  @media (max-width: 400px) {
+      font-size: 16px;
+    }
 `
 
 function UserPosts({ userData, selectedUserPosts, selectedUser }) {
